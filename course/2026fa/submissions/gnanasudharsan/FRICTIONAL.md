@@ -14,7 +14,7 @@ student's status, and one "apply" result was a job outside the US.
 wrote the key prediction, approved the plan, and owns every judgment the report asks for.
 Several of the student's own reflections are still to be written (marked below).
 
-> Entries 1–9 were drafted by the AI agent from the session record on 2026-10-01 and
+> Entries 1–10 were drafted by the AI agent from the session record on 2026-10-01 and
 > describe what is visible in that record. Sections marked **[STUDENT — in your own words]**
 > must be written by me; the agent must not write them.
 
@@ -23,7 +23,7 @@ Several of the student's own reflections are still to be written (marked below).
 | # | Who | Attempt | Expected | What happened | Response / learning | Trace |
 |---|---|---|---|---|---|---|
 | 1 | Student | Changed scope from Data Scientist on STEM OPT (SOC 15-2051) to Data Engineering / MLOps, graduating Dec 2026, pre-OPT | — | A predict-phase brief for the old scope already existed | Chose a fresh brief and a new branch; old brief archived, not deleted | `archive/CHANGE-BRIEF-ds-stemopt-15-2051.md`; branch `contrib/2026fa-gnanasudharsan-de-mlops-h1b` |
-| 2 | Agent | `npm run doctor`, `npm run verify` baseline | both pass | doctor passed; verify's manifest step failed: `ModuleNotFoundError: No module named 'yaml'` | Not installed by the agent (system Python). Still unresolved | `CHANGE-BRIEF.md` session; worked run "Did not test" |
+| 2 | Agent | `npm run doctor`, `npm run verify` baseline | both pass | doctor passed; verify's manifest step failed: `ModuleNotFoundError: No module named 'yaml'` | Not installed by the agent. **Resolved 2026-10-02:** `pyyaml` was already in the repo's `.venv`; with `.venv/bin` on PATH, `npm run verify` passes (3 `.gitignore`-pattern warnings) | TEST-REPORT.md §5 |
 | 3 | Agent | Profiled the CSV for this domain | some blank rows | 28,812 of 30,369 rows have blank approvals; "MLOps" appears in 0 sponsored titles; Google/Amazon/Meta absent | Blank became a hold reason, never zero; MLOps mapping labeled model-judgment | `CHANGE-BRIEF.md` §1, §4 |
 | 4 | Agent | Ran the scorer with the honest pre-OPT phrase "OPT EAD not yet authorized" | needs sponsorship = true | `profile_needs_sponsorship: false` (regex at `role-scorer.mjs:60`) | Prototype exits 3 instead of reporting; scorer not patched | `runs/break/2-trap-persona.txt`; test "scorer regex trap" |
 | 5 | Student | Wrote CHANGE-BRIEF §5: the prototype would misclassify recently funded companies without DOL records as sponsors | — | Design holds funded-but-unrecorded companies (`no-sponsorship-record`); covered by the Composabl fixture only, since no such company appeared in the real sample | Prediction not confirmed, and not fully tested on real data | `CHANGE-BRIEF.md` §5; test "recent Form D funding does not stand in" |
@@ -50,10 +50,6 @@ Several of the student's own reflections are still to be written (marked below).
 - **What I tried & what happened:** I integrated the 80 Days CSV sponsorship data with SEC Form D funding samples and built a Node.js prototype that validates postings against liveness checks before hitting the official role scorer.
 - **Difficulties & checks:** Encountered a batch liveness checker bug where multiple URLs caused redirection collisions, which I resolved by running single-URL checks. Also caught the scorer's pre-OPT regex trap where "not yet authorized" was misread as authorized.
 - **Human vs. AI contributions:** The AI drafted the initial prototype structure, test suite, and report template. I personally reviewed and signed the attestation, verified the CSV approval counts by hand against raw data, and adjusted the workflow to ensure zero personal data leaks.
-
-- What did you personally run or check, and what surprised you?
-- Which AI output did you accept without changes, which did you change, and which did you reject, and why?
-- Unresolved questions, e.g. are Possible = 0.3 / None = 0.0 defensible? Should a company with 0 approvals but 2 denials (Mobilio) really rank as "None"?
 
 ## Open questions (agent-recorded)
 
