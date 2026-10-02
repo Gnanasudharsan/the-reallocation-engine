@@ -48,24 +48,6 @@ desktop app.
 
 - **The AI did:** profiled the data; drafted CHANGE-BRIEF §1–§4; wrote the recipe, card, README, prototype, tests, and fixtures; fetched the public postings; ran liveness, the scorer, tests, conformance, and the PII scan; ran the break attempts; drafted this file, the worked run, the run log, and the AI-attributed entries in FRICTIONAL.md.
 - **The student decided:** the career situation and scope (rejecting the earlier Data Scientist scope); the CHANGE-BRIEF §5 prediction (written by the student); approval of the implementation plan; the file paths and commands to use.
-- **Still the student's to do:** replace the placeholder fit ratings and start dates; accept or replace the tier→p values; verify the visa-timeline assumptions; re-run and sign the attestation; write the first-person sections of FRICTIONAL.md.
-
-# Domain Justification: Data Engineering & MLOps H-1B Visa Triage
-
-## 1. User & Situation
-- **Target User:** International Master's student in Data Analytics Engineering graduating December 2026, targeting Data Engineer and MLOps / ML Platform Engineer roles.
-- **Situation:** Facing an F-1 OPT unemployment window countdown and strict H-1B sponsorship requirements. The primary hurdle is information asymmetry—knowing which companies actually sponsor visas for data/ML roles versus those that only appear to hire.
-
-## 2. Information Asymmetry Addressed
-Without this engine, a student cannot easily see:
-- Whether a company with recent funding (SEC Form D) has historical DOL H-1B approvals for data roles (as ~95% of companies in the file have blank approval records).
-- Whether a posting is a "ghost job" or dead link before spending hours tailoring a résumé.
-- Whether timeline constraints (EAD start date vs. role start date and lottery windows) are viable.
-
-## 3. Engine Layer Connection & The 3-3-2 Split
-- **Layers Used:** 80 Days to Stay (sponsorship & funding), Job-Ops (liveness), and Cognitive Pivot (BLS SOC code context).
-- **3-3-2 Impact:** Takes over the heavy research phase of the "2" (researching and tailoring applications), saving an estimated 4–6 hours per week and cleanly routing dead/non-sponsoring roles into the networking queue ("Consider / Network").
-
-## 4. Domain-Specific Failure Modes
-- **Title Mismatch:** "MLOps" appears in zero sponsored job title strings, requiring model judgment mappings.
-- **Legal vs. Brand Name Discrepancies:** Companies like Upstart appear only under legal entity names (`UPSTART NETWORK INC`), which would cause false skips if not normalized.
+- **The AI also did (2026-10-02):** re-ran every check from a clean checkout of commit `506e773` (results in TEST-REPORT.md); corrected factual items in SUBMISSION.md, SOURCES.md, TEST-REPORT.md, and FRICTIONAL.md entries 2 and the header.
+- **The student wrote:** the domain justification (`domain-justification.md`), the first version of TEST-REPORT.md and SUBMISSION.md, and the "Student Reflection" section of FRICTIONAL.md.
+- **Still open (student):** the sample fit ratings (0.7) and start dates ("flexible") are still placeholders; the tier→p values are not yet accepted or replaced; the visa-timeline assumptions are unverified; the attestation is not yet signed.
