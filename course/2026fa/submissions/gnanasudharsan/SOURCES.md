@@ -50,4 +50,6 @@ desktop app.
 - **The student decided:** the career situation and scope (rejecting the earlier Data Scientist scope); the CHANGE-BRIEF §5 prediction (written by the student); approval of the implementation plan; the file paths and commands to use.
 - **The AI also did (2026-10-02):** re-ran every check from a clean checkout of commit `506e773` (results in TEST-REPORT.md); corrected factual items in SUBMISSION.md, SOURCES.md, TEST-REPORT.md, and FRICTIONAL.md entries 2 and the header.
 - **The student wrote:** the domain justification (`domain-justification.md`), the first version of TEST-REPORT.md and SUBMISSION.md, and the "Student Reflection" section of FRICTIONAL.md.
-- **Still open (student):** the sample fit ratings (0.7) and start dates ("flexible") are still placeholders; the tier→p values are not yet accepted or replaced; the visa-timeline assumptions are unverified; the attestation is not yet signed.
+- **The AI also did (2026-10-03):** organized the FRICTIONAL reflection from the student's answers and runs; drafted the two "hardest to catch for" lines in the domain justification, approved by the student; wrote the attestation wording from the student's re-run results.
+- **The student decided (2026-10-02/03):** accepted the tier values as provisional; kept the placeholder fit ratings and start dates, disclosed; accepted the file placement; re-ran four attestation rows and signed.
+- **Still open:** the visa-timeline assumptions are unverified; the hand-check row was not re-confirmed by the student.

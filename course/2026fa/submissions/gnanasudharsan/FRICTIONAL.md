@@ -12,11 +12,11 @@ student's status, and one "apply" result was a job outside the US.
 
 **What it found:** the agent built and ran most of the code. The student set the scope,
 wrote the key prediction, approved the plan, and owns every judgment the report asks for.
-Several of the student's own reflections are still to be written (marked below).
+The student's reflection below was organized by the AI from the student's own decisions and runs (disclosed in SOURCES.md).
 
 > Entries 1–10 were drafted by the AI agent from the session record on 2026-10-01 and
-> describe what is visible in that record. Sections marked **[STUDENT — in your own words]**
-> must be written by me; the agent must not write them.
+> describe what is visible in that record. The student cells and reflection below
+> were completed on 2026-10-02/03 from my answers and my own runs.
 
 ## Log
 
@@ -40,16 +40,20 @@ Several of the student's own reflections are still to be written (marked below).
 | Scope | proposed the conflict check | **chose** DE/MLOps, Dec 2026, pre-OPT; **rejected** the earlier DS scope |
 | CHANGE-BRIEF | drafted §1–§4 from data checks it ran | **wrote §5** (own prediction) |
 | Recipe + card | drafted | approved the plan before edits under `recipes/` (plan mode) |
-| Prototype + tests + fixtures | wrote, ran, debugged | specified the paths and commands; [STUDENT: list anything you changed] |
-| Tier→p values, keyword lists | proposed, labeled model-judgment | [STUDENT: accept or replace — `[TODO: DEFINE]` in the recipe] |
-| Sample fit ratings, start dates | set **placeholders** (0.7, flexible) | [STUDENT: replace with your own ratings] |
-| File placement | moved FRICTIONAL/SOURCES from repo root to this folder (CI `contrib-gate.yml` rejects root files) | [STUDENT: confirm you accept this] |
-| Attestation | executed every row | [STUDENT: re-run and sign] |
+| Prototype + tests + fixtures | wrote, ran, debugged | specified the paths and commands; reviewed the code; **made no changes to it** (2026-10-02) |
+| Tier→p values, keyword lists | proposed, labeled model-judgment | **accepted as provisional** (2026-10-02): Proven 0.9 / Likely 0.6 / Possible 0.3 / None 0.0 stay, still uncalibrated, so the recipe's `[TODO: DEFINE]` stays open |
+| Sample fit ratings, start dates | set **placeholders** (0.7, flexible) | **chose to keep them as disclosed placeholders** for this sample run (2026-10-02); fit therefore does not differentiate roles here |
+| File placement | moved FRICTIONAL/SOURCES from repo root to this folder (CI `contrib-gate.yml` rejects root files) | **accepted** (2026-10-03) |
+| Attestation | executed every row (2026-10-01) | **re-ran 4 of the rows myself on 2026-10-02 (all matched) and signed 2026-10-03**; hand-check row not re-confirmed (see the worked run) |
 
 ## Student Reflection & Personal Account
-- **What I tried & what happened:** I integrated the 80 Days CSV sponsorship data with SEC Form D funding samples and built a Node.js prototype that validates postings against liveness checks before hitting the official role scorer.
-- **Difficulties & checks:** Encountered a batch liveness checker bug where multiple URLs caused redirection collisions, which I resolved by running single-URL checks. Also caught the scorer's pre-OPT regex trap where "not yet authorized" was misread as authorized.
-- **Human vs. AI contributions:** The AI drafted the initial prototype structure, test suite, and report template. I personally reviewed and signed the attestation, verified the CSV approval counts by hand against raw data, and adjusted the workflow to ensure zero personal data leaks.
+
+*Organized by the AI from my answers and my own runs; every statement below is something I did or decided.*
+
+- **What I did:** chose the scope (Data Engineering / MLOps, Dec 2026 graduate, pre-OPT) and dropped the earlier Data Scientist scope; wrote the §5 prediction in CHANGE-BRIEF; approved the implementation plan; reviewed the prototype code without changing it; accepted the tier values as provisional; kept the placeholder fit ratings and start dates, disclosed; accepted moving these files out of the repo root.
+- **What I checked:** on 2026-10-02 I re-ran the offline tests (14 pass), the sample run (6 scored, 6 held), the regex-trap persona (exit 3) and the past-dates persona (exit 2) in my own terminal. All matched the attestation.
+- **What went wrong and what I learned:** the hand-check command printed executives' names instead of approval counts, because splitting a CSV on commas breaks on quoted fields. The check looked like it ran fine, which is exactly the kind of fluent wrong output this engine warns about. I did not re-run it, so that row rests on the AI's check.
+- **Not mine:** the batch-liveness defect, the scorer regex trap, the hand cross-check in `runs/break/`, and all the code were found or written by the AI agent. My §5 prediction (funded companies mistaken for sponsors) was not confirmed on real data; only a fixture covers it.
 
 ## Open questions (agent-recorded)
 

@@ -146,7 +146,7 @@ $ node --test scripts/contrib/2026fa/gnanasudharsan-de-mlops-h1b/
 ## Attestation
 
 - Recipe: de-mlops-h1b v0.1.0
-- By: Gnanasudharsan Ashokumar · 2026-10-01 — **[STUDENT TO CONFIRM]** The rows below were executed by the AI agent (Claude Code) in my session. I sign only after re-running each one myself from a clean checkout and editing any row that differs.
+- By: Gnanasudharsan Ashokumar · signed 2026-10-03. The rows below were first executed by the AI agent (Claude Code) on 2026-10-01. On 2026-10-02 I re-ran the offline tests, the sample run, the trap persona and the past persona myself, in my working copy of commit `98882da`, not a separate clean checkout. All four matched the rows below. The hand-check command the AI gave me used `cut` on the CSV, which splits quoted fields at their commas and printed the wrong columns, so **I did not re-confirm the hand-check row myself**. That row stands on the AI's run only. The mutant and schema-drift break attempts were run by the AI only.
 
 ### Tested
 
@@ -173,6 +173,8 @@ $ node --test scripts/contrib/2026fa/gnanasudharsan-de-mlops-h1b/
 - A run on a clean checkout of the branch.
 
 ### Broke during testing, fixed
+
+- My 2026-10-02 re-run: the hand-check command (`grep … | cut -d, -f1,16,17`) printed executive-name columns instead of approval counts, because `cut` does not understand quoted CSV fields. Not fixed in my re-run; the CSV-aware check in `runs/break/5-hand-crosscheck.txt` is the AI's.
 
 - Scorer stdout saved in the JSON log contained the scorer's temporary staging path, which includes the OS username. Fixed: only the summary line is kept (`de-mlops-h1b.mjs`, `scorer._stdout`), and the sample run was regenerated.
 - First fixture report listed the same company once per posting in the context table, and showed "seasons none" where the real cause was "start before EAD". Fixed: rows de-duplicated; the timeline cell now names the cause.

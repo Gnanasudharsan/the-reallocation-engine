@@ -16,4 +16,6 @@ Without this engine, a student cannot easily see:
 
 ## 4. Domain-Specific Failure Modes
 - **Title Mismatch:** "MLOps" appears in zero sponsored job title strings, requiring model judgment mappings.
+  - *Hardest to catch for:* a student reading only the Apply/Consider column. A wrongly matched title (the sample scored "Specialist Solutions Architect – Data Engineering") looks like any other scored row.
 - **Legal vs. Brand Name Discrepancies:** Companies like Upstart appear only under legal entity names (`UPSTART NETWORK INC`), which would cause false skips if not normalized.
+  - *Hardest to catch for:* a student who knows the company only by its brand, who would read "not in dataset" as "doesn't sponsor" and drop a real sponsor (Upstart; Instacart is `MAPLEBEAR INC`).
